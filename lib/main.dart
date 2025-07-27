@@ -29,19 +29,36 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String myData = "Reqem 0-dir";
+  String myData = "Add a counter for Week:";
 
   void  _incrementCounter() {
     setState(() {
 
       _counter++;
 
-      if(_counter < 5){
-        myData = "Reqem 5-den kichikdir";
+      // if(_counter < 5){
+      //   myData = "Reqem 5-den kichikdir";
+      // }else if(_counter == 5){
+      //   myData = "Reqem 5-dir";
+      // }else{
+      //   myData = "Reqem 5-den boyukdur";
+      // }
+      if(_counter == 1){
+        myData = "Monday";
+      } else if(_counter == 2){
+        myData = "Tuesday";
+      } else if(_counter == 3){
+        myData = "Wednesday";
+      }else if(_counter == 4){
+        myData = "Thursday";
       }else if(_counter == 5){
-        myData = "Reqem 5-dir";
+        myData = "Friday";
+      }else if(_counter == 6){
+        myData = "Saturday";
+      }else if(_counter == 7){
+        myData = "Sunday";
       }else{
-        myData = "Reqem 5-den boyukdur";
+        myData = "Week haven`t that number";
       }
     });
   }
